@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "История";
+}
+
+<div class="DataTables">
+
+    <div class="Button-top">
+        <div class="Back">
+        <form method="post" asp-controller="Account"  asp-action="Back" >
+        <input type="submit" value="Назад" />
+        </form>
+        </div>
+        <div class="LogOut">
+        <form method="post"  asp-controller="Account" asp-action="Logout">
+        <input type="submit" value="Выход" />
+        </form>
+        </div>
+    </div>
+  
+    
+    <h4>Журнал учета входа пользователей в систему</h4>
+  
+    <table cellpadding="7">
+            <tr> <th>Дата и время</th><th>ФИО</th><th>Отдел</th><th>Должность</th></tr>
+    @foreach (var history in Model)
+    {
+        
+           <tr> <td>@history.Date</td> 
+                <td>@history.FIO</td>
+                <td>@history.Department</td>
+                <td>@history.Part</td>
+          </tr>
+        
+        
+    }
+    </table>
+</div>

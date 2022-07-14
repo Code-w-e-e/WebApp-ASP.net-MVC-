@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Главная";
+}
+
+
+@foreach(var user in Model)
+    {
+        <p class="LoginUsers">Вы вошли в систему как @user.FIO (@user.Role)</p>
+    
+    <div class="LogOut">
+        <form method="post"  asp-controller="Account" asp-action="Logout">
+        <input type="submit" value="Выход" />
+        </form>
+    </div>
+
+    @if(@user.Role == "user"){
+        <ul class="List">
+            <li>@Html.ActionLink("Реестр абонентов", "AbonentList", "Home")</li>
+            <li>@Html.ActionLink("Реестр отозванных сертификатов", "CertificateList", "Home")</li>
+        </ul>
+    }
+    @if(@user.Role == "admin"){
+        <ul class="List">
+            <li>@Html.ActionLink("Реестр пользователей", "UsersList", "Home")</li>
+            <li>@Html.ActionLink("Журнал учета входа пользователей в систему", "History", "Home")</li>
+        </ul>
+    }
+
+
+    }
+ 

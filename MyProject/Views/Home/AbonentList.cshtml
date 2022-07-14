@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Реестр абонентов";
+}
+
+<div class="DataTables">
+
+    <div class="Button-top">
+        <div class="Back">
+        <form method="post" asp-controller="Account"  asp-action="Back" >
+        <input type="submit" value="Назад" />
+        </form>
+        </div>
+        <div class="LogOut">
+        <form method="post"  asp-controller="Account" asp-action="Logout">
+        <input type="submit" value="Выход" />
+        </form>
+        </div>
+    </div>
+
+    <h4>Реестр абонентов</h4>
+  
+    <table cellpadding="7">
+            <tr> <th>ФИО</th><th>Номер контракта</th><th>Номер</th></tr>
+    @foreach (var abonent in Model)
+    {
+        
+           <tr> <td>@abonent.FIO</td> 
+                <td>@abonent.NumContract</td>
+                <td>@abonent.Number</td>               
+          </tr>
+        
+        
+    }
+    </table>
+</div>

@@ -1,0 +1,21 @@
+﻿
+
+@{
+    
+    ViewData["Title"] = "Вход в аккаунт";
+}
+
+<div class="form_authoriazation">
+    
+    <form method="post" class="authorize">
+    <fieldset>
+      <h3 class="main">Войдите в систему</h3>
+      <p><input type="text" name="login" placeholder="Логин"></p>
+      <p><input type="password" name="password" placeholder="Пароль"></p>
+    </fieldset>
+    <p><input type="submit" value="Войти" class="ButtonInPage"></p>
+    <p class="MessageBag">@ViewData["Message"]</p>
+    </form> 
+      
+    
+</div>

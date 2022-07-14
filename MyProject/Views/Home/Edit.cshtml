@@ -1,0 +1,35 @@
+﻿
+
+@{
+     ViewData["Title"] = "Редактировать";
+}
+
+<div class="Button-top">
+        <div class="Back">
+        <form method="post" >
+        <input type="submit" value="Назад"  action="action" onclick="window.history.go(-1); return false;" />
+        </form>
+        </div>
+        <div class="LogOut">
+        <form method="post"  asp-controller="Account" asp-action="Logout">
+        <input type="submit" value="Выход" />
+        </form>
+        </div>
+</div>
+
+
+<div class="DataTables">
+    <h4>Редактировать инфомацию о пользователе</h4>
+    @foreach (var user in Model){
+    <form method="post" class="AddChangeUser" asp-action="SaveChangeUser" asp-controller="Home" asp-route-id="@user.ID">
+        <input type="text" name="FIO" value="@user.FIO" >
+        <input type="text" name="Role" value="@user.Role">
+        <input type="text" name="LogIn" value="@user.Login">
+        <input type="text" name="Password" value="@user.Password">
+        <input type="text" name="Department" value="@user.Department">
+        <input type="text" name="Part" value="@user.Part">
+        <input type="submit" class="ButtonInPage" value="Сохранить" />
+    </form>
+    }
+
+</div>

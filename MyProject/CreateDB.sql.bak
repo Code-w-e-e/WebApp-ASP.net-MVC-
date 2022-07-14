@@ -1,0 +1,36 @@
+-- create database
+CREATE DATABASE Authorization OWNER root;
+
+-- Таблица Пользователи
+create table Users
+    (
+        id              serial          Primary Key,
+        fio             varchar(50)     not null,	
+        login           varchar(20)     not null,
+        password        varchar(20)     not null,
+        role            varchar(20)     not null,	
+		department      varchar(50)     not null,	
+		part            varchar(20)     not null	
+    );
+insert into Users
+            (fio, login, password, role, department, part) 
+    values
+            ('Майоров Алексей Семенович',   'user1', 'user1', 'admin', 'Отдел разработки','Программист');
+			
+-- Таблица Абоненты
+create table Abonents
+    (
+        id              serial          Primary Key,
+        fio             varchar(50)     not null,	
+        numcontract     int4            not null,
+        number          varchar(20)     not null
+    );
+insert into Abonents
+            (fio, numcontract, number) 
+    values
+            ('Мальцев Давид Максимович', 1546, '+79743613740'),
+			('Федосеев Даниил Иванович', 457,'+79502659248'),
+			('Казаков Егор Фёдорович', 1654,'+74587898854'),
+			('Воробьев Никита Даниэльевич', 135,'86547894125'),
+			('Соколова Елизавета Алиевна', 1257,'86541239657'),
+			('Смирнова Амина Ивановна', 644,'+74569514262');

@@ -1,0 +1,186 @@
+html {
+  font-size: 14px;
+}
+
+
+    html {
+        position: relative;
+        min-height: 100%;
+        min-width: 100%;
+    }
+
+@media (min-width: 1200px), (min-width: 800px), (min-width: 400px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+    body {
+        margin-bottom: 60px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .container_header {
+        padding-left: 40px;
+    }
+
+    .form_authoriazation {
+        width: 100%;
+        position: fixed;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        overflow: auto;
+        padding: 10px;
+    }
+
+    div h3.main {
+        text-align: center;
+        color: #187ef2;
+        margin-bottom: 30px;
+    }
+
+    .form_authoriazation fieldset p {
+        margin-bottom: 10px;
+    }
+
+    fieldset p input {
+        border: 1px solid #a6a4a4;
+        padding: 5px;
+    }
+
+    form.authorize input.button {
+        font-weight: 700;
+        color: #187ef2;
+        padding: 5px 40px;
+        border-radius: 1px;
+        background: #fff;
+        border: 1px solid #a6a4a4;
+        transition: 0.2s;
+        box-shadow: 0 0 5px;
+    }
+
+    form.authorize {
+        padding: 70px;
+        border: 1px solid #c9c9c9;
+        box-shadow: 0 0 10px 2px;
+        color: #c9c9c9;
+    }
+
+    div.container {
+        padding: 0;
+        margin: 0;
+    }
+
+    p.LoginUsers {
+        color: #187ef2;
+        padding: 0;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        text-align: right;
+        
+    }
+
+    .LogOut{
+       display: inherit; 
+       margin-right: 30px;
+    }
+    
+    .Button-top{
+       text-align: right;
+       margin-right: 30px;
+    }
+
+    .Button-top > div{
+        display: inline-block;
+        margin-right: 0;
+    }
+
+    div.LogOut,  div.Back{       
+        position:relative;
+        text-align: right;
+        margin-bottom: 50px;
+    }
+
+    div.Back{
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .List{
+        list-style-type: square;
+    }
+    .List li{
+        color: #187ef2;
+        font-size: 15px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table{
+        border: 1px solid #c9c9c9;
+        margin-left: 50px;
+    }
+
+    td,th{
+        border: 1px solid #c9c9c9;
+    }
+
+    td.ButtonUpdateDelete{
+        border: none;
+
+    }
+
+    .ButtonUpdateDelete a{
+        text-decoration: none;
+    }
+
+    .DataTables table{
+        display:flex;
+        justify-content: center;
+        overflow: auto;
+        border: none;
+        
+    }
+
+    .DataTables  h4{
+        text-align: center;
+        color: #187ef2;
+        margin-bottom: 40px;
+    }
+    .DataTables{
+        padding-bottom: 40px;
+    }
+  
+    .MessageBag{
+        color: red;
+    }
+
+    .AddChangeUser{ 
+        color: #c9c9c9;
+        display: flex;
+        justify-content: center;
+    }
+    .AddChangeUser input{
+        color: black;
+        padding: 5px;
+        margin-right: 5px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    div.LogOut input, div.Back input, input.ButtonInPage{
+        color: #187ef2;
+        background: white;
+        border:1px solid #c9c9c9; 
+        padding: 5px;
+    }
+    
+    
+    

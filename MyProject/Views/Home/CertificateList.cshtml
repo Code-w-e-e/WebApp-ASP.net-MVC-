@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Реестр отозванных сертификатов";
+}
+
+<div class="DataTables">
+    
+    <div class="Button-top">
+        <div class="Back">
+        <form method="post" asp-controller="Account"  asp-action="Back" >
+        <input type="submit" value="Назад" />
+        </form>
+        </div>
+        <div class="LogOut">
+        <form method="post"  asp-controller="Account" asp-action="Logout">
+        <input type="submit" value="Выход" />
+        </form>
+        </div>
+    </div>
+
+
+    <h4>Реестр отозванных сертификатов</h4>
+    <table cellpadding="7">
+            <tr> <th>Номер сертификатов</th><th>Дата начала</th><th>Дата окончания</th></tr>
+    @foreach (var certificate in Model)
+    {
+        
+           <tr> <td>@certificate.NumCertificate</td> 
+                <td>@certificate.DateStart</td>
+                <td>@certificate.DateEnd</td>
+                
+          </tr>
+        
+        
+    }
+    </table>
+</div>
